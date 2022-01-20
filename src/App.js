@@ -1,0 +1,195 @@
+import Button from "./Button";
+import Output from "./Output";
+import { useState } from "react";
+import OperationButton from "./OperationButton";
+import EqualButton from "./EqualButton";
+import SpecialButton from "./SpecialButton";
+
+function App() {
+    const [firstNumber, setFirstNumber] = useState("");
+    const [secondNumber, setSecondNumber] = useState("");
+    const [displaySecondNumber, setDisplaySecondNumber] = useState("");
+    const [operation, setOperation] = useState("");
+    const [result, setResult] = useState("");
+
+    return (
+        <div className="calculator-grid">
+            <Output
+                firstNumber={firstNumber}
+                secondNumber={secondNumber}
+                displaySecondNumber={displaySecondNumber}
+                result={result}
+            />
+            <SpecialButton
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setFirstNumber={setFirstNumber}
+                setResult={setResult}
+                setSecondNumber={setSecondNumber}
+                firstNumber={firstNumber}
+                result={result}
+                text="AC"
+                clase="span-2"
+            />
+            <SpecialButton
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setFirstNumber={setFirstNumber}
+                setResult={setResult}
+                setSecondNumber={setSecondNumber}
+                firstNumber={firstNumber}
+                result={result}
+                text="DEL"
+            />
+            <OperationButton
+                setOperation={setOperation}
+                setSecondNumber={setSecondNumber}
+                setFirstNumber={setFirstNumber}
+                firstNumber={firstNumber}
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                text="÷"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="1"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="2"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="3"
+            />
+            <OperationButton
+                setOperation={setOperation}
+                setSecondNumber={setSecondNumber}
+                setFirstNumber={setFirstNumber}
+                firstNumber={firstNumber}
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                text="*"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="4"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="5"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="6"
+            />
+            <OperationButton
+                setOperation={setOperation}
+                setSecondNumber={setSecondNumber}
+                setFirstNumber={setFirstNumber}
+                firstNumber={firstNumber}
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                text="+"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="7"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="8"
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="9"
+            />
+            <OperationButton
+                setOperation={setOperation}
+                setSecondNumber={setSecondNumber}
+                setFirstNumber={setFirstNumber}
+                firstNumber={firstNumber}
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                text="-"
+            />
+            <Button
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="."
+            />
+            <Button
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                setResult={setResult}
+                result={result}
+                firstNumber={firstNumber}
+                setFirstNumber={setFirstNumber}
+                secondNumber={secondNumber}
+                setSecondNumber={setSecondNumber}
+                text="0"
+            />
+            <EqualButton
+                firstNumber={firstNumber}
+                secondNumber={secondNumber}
+                operation={operation}
+                setDisplaySecondNumber={setDisplaySecondNumber}
+                displaySecondNumber={displaySecondNumber}
+                setResult={setResult}
+                text="="
+                clase="span-2"
+            />
+        </div>
+    );
+}
+
+export default App;
